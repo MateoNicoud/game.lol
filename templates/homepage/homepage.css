@@ -3,4 +3,15 @@
     @media only screen and(min-device-width: 1200px) {
     width: 1080px;
     }
+    display: flex;
+    justify-content: center;
+
+}
+.news>div{
+    display: flex;
+    justify-content: center;
+}
+.news>div>*{
+    display: flex;
+    justify-content: center;
 }
