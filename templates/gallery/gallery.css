@@ -56,3 +56,6 @@ object {
     background-color: green;
     cursor: pointer;
 }
+.displayOff{
+    display: none;
+}

@@ -78,3 +78,13 @@ requestButton.onclick = function () {
 
 
 }
+
+//--------------------------------------------------------------------
+let addInput =document.getElementById("addInput")
+let showButton = document.getElementById("showButton");
+let showInput = document.getElementById("showInput");
+showButton.onclick = function () {
+    addInput.classList.remove("displayOff");
+    showInput.setAttribute("class","displayOff");
+
+}
