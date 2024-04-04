@@ -64,10 +64,17 @@ requestButton.onclick = function () {
 
     let addImage = document.getElementById("addImage").value;
     let pokemon = document.createElement("div");
+    let destroyButton =document.createElement("button");
     imagesSection.appendChild(pokemon);
+    destroyButton.textContent="x"
+    pokemon.appendChild(destroyButton)
     let showSprite = document.createElement("img");
     let sprite = addImage;
     showSprite.setAttribute('src', sprite);
-    return pokemon.appendChild(showSprite);
+     pokemon.appendChild(showSprite);
+    destroyButton.onclick = function (){
+        imagesSection.removeChild(destroyButton.parentNode)
+    }
+
 
 }
