@@ -20,6 +20,15 @@ fetch("https://tyradex.tech/api/v1/pokemon")
             if (inputName.value !== "" && inputSprite.value !== "") {
                 let pokemon = document.createElement("div");
                 form.appendChild(pokemon);
+
+                let destroyButton =document.createElement("button");
+                destroyButton.textContent="x"
+                pokemon.appendChild(destroyButton)
+
+                destroyButton.onclick = function (){
+                    form.removeChild(destroyButton.parentNode)
+                }
+
                 let showName = document.createElement("h3");
                 let name = inputName.value;
                 showName.textContent = name;
