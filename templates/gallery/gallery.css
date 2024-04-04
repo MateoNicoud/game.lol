@@ -1,0 +1,58 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 20px;
+}
+.column {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(150px, 0.8fr));
+
+    grid-gap: 20px;
+justify-content: center
+}
+object {
+    pointer-events: none;
+}
+
+#displayImages>div {
+    background-color: green;
+    border: black 3px solid;
+    box-shadow: 5px 2px 2px black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+
+
+}
+#displayImages>div>img{
+    width: fit-content;
+
+
+
+}
+.column>div>img{
+    height: 100vh;
+}
+#displayOptions{
+    margin-top: 20px;
+    display: flex;
+    gap:10px;
+    margin-bottom: 50px;
+}
+#displayOptions>button {
+    background-color: greenyellow;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#displayOptions>button:hover{
+    background-color: green;
+    cursor: pointer;
+}
