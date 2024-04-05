@@ -115,15 +115,12 @@ showButton.onclick = function () {
    ,5000 )
 
 
-var slideImages = document.querySelectorAll('.slide-image');
+let slideImages = document.querySelectorAll('.slide-image');
 
-// Récupérez le dernier élément de la liste
-var lastSlideImage = slideImages[slideImages.length - 1];
+let lastSlideImage = slideImages[slideImages.length - 1];
 
-// Obtenez le style de l'élément
-var backgroundImageStyle = lastSlideImage.style.backgroundImage;
+let backgroundImageStyle = lastSlideImage.style.backgroundImage;
 let carrousel = document.querySelector(".carrousel");
 console.log(backgroundImageStyle)
 carrousel.style.backgroundImage = backgroundImageStyle;
-// Utilisez une expression régulière pour extraire l'URL de l'image
 
