@@ -56,6 +56,8 @@ div.appendChild(part2);
 div.appendChild(part3);
 part1.appendChild(button);
 part2.appendChild(title);
+part2.style.display ="flex"
+part2.style.alignItems ="center"
 part3.appendChild(description);
 div.style.width = "100%";
 div.style.height = "80px";
@@ -75,15 +77,21 @@ button.onclick = function () {
     if (dropdownOpened) {
         part1.removeChild(part1.querySelector('.dropdown-content'));
         part1.style.marginTop = "0px" ; // Fixe la hauteur de part1
+        button.style.borderRadius = "10px";
 
         dropdownOpened = false;
     } else {
         dropdown();
         part1.style.marginTop = "82px" ; // Fixe la hauteur de part1
         dropdownOpened = true;
+        button.style.borderRadius = "10px 10px 0 0";
+
     }
 }
 let css = `
+        *{
+        margin: 0px;
+        }
         .dropdown-content a {
             color: black;
             padding: 12px 16px;
@@ -96,6 +104,13 @@ let css = `
         .dropdown-content > a:hover {
             background-color: whitesmoke;
         }
+        .dropdown>button {
+        width : 100%;
+        background-color: white;
+        border : none;
+        border-radius: 10px;
+        }
+
     `;
 let styile = document.createElement("style");
 styile.textContent = css;
