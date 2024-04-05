@@ -88,3 +88,42 @@ showButton.onclick = function () {
     showInput.setAttribute("class","displayOff");
 
 }
+//------------------------------------------------------------------------
+
+    let slides = document.getElementsByClassName('carrousel-item');
+    function addActive(slide){
+        slide.classList.add('active')
+    }
+    function removeActive(slide){
+        slide.classList.remove('active');
+    }
+    addActive(slides[0]);
+    setInterval(function (){
+        for (let i=0;i<slides.length;i++){
+            if (i+1 === slides.length){
+                setTimeout(removeActive, 100, slides[i]);
+                addActive(slides[0]);
+                break;
+            }
+            if (slides[i].classList.contains('active')){
+                setTimeout(removeActive,1000,slides[i]);
+                addActive(slides[i+1]);
+                break;
+            }
+        }
+        }
+   ,5000 )
+
+
+var slideImages = document.querySelectorAll('.slide-image');
+
+// Récupérez le dernier élément de la liste
+var lastSlideImage = slideImages[slideImages.length - 1];
+
+// Obtenez le style de l'élément
+var backgroundImageStyle = lastSlideImage.style.backgroundImage;
+let carrousel = document.querySelector(".carrousel");
+console.log(backgroundImageStyle)
+carrousel.style.backgroundImage = backgroundImageStyle;
+// Utilisez une expression régulière pour extraire l'URL de l'image
+
