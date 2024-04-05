@@ -1,14 +1,19 @@
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 30px;
+    justify-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
 }
 .column {
     display: grid;
-    grid-template-columns: repeat(1, minmax(150px, 0.8fr));
+    grid-template-columns: repeat(1, minmax(150px, 0.6fr));
 
     grid-gap: 20px;
-justify-content: center
+justify-content: center;
+    margin-bottom: 40px;
 }
 object {
     pointer-events: none;
@@ -23,20 +28,25 @@ object {
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
+    width: 100%;
+
 
 
 }
 #displayImages>div>img{
-    width: fit-content;
+    width: 100%;
 
 
 
 }
 .column>div>img{
-    height: 100vh;
+    height: auto;
+
 }
+/*------------------------------------------------*/
 #displayOptions{
-    margin-top: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
     display: flex;
     gap:10px;
     margin-bottom: 50px;
@@ -57,5 +67,74 @@ object {
     cursor: pointer;
 }
 .displayOff{
-    display: none;
+    display: none !important;
+}
+/*---------------------------------------*/
+.carrousel{
+    position: relative;
+    width: 1080px;
+    height: 300px;
+    overflow: hidden;
+    /*background-image:{url('./../../images/pub2.png')};*/
+}
+.carrousel .slide-image{
+    width: 1080px;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.carrousel-item{
+    position: absolute;
+    width: 100%;
+    height: 1080px;
+    border: none;
+    top: 0;
+    left: 100%;
+}
+.carrousel-item.active {
+    left:0;
+    transition: all 1s ease-out;
+}
+.carousel-item div {
+    height: 100%;
+}
+.carrousel-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+/*----------------------------------------------------------*/
+#showButton{
+    width: 30px;
+    height: 30px;
+    border-radius: 80px;
+    background-color: yellow;
+    border: black 2px solid;
+    font-size: 20px;
+    justify-content: end;
+    margin-right: 70px;
+}
+#showInput{
+    display: flex;
+    justify-content: end;
+}
+#addInput{
+    display: flex;
+    justify-content: center;
+}
+#addImage{
+    border-right: none;
+    background-color: yellow;
+    height: 34px;
+}
+#button{
+    border-left: none;
+    background-color: darkorange;
+}
+#button{
+    height: 40px;
+}
+#showButton,#addInput{
+    margin-bottom: 60px;
+    margin-top: -50px;
 }
