@@ -1,0 +1,36 @@
+#gamesGrid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(500px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    margin-top: 80px;
+
+}
+#gamesGrid>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #ffdd00 3px solid;
+    box-shadow: lightsalmon 5px 5px 5px;
+    background-color: green;
+
+}
+#gamesGrid>div>img{
+    width: 600px;
+}
+#gamesGrid>div>h3{
+    font-size: 40px;
+    color: white;
+}
+#gamesGrid>div>button{
+    margin-bottom: 20px;
+    width: 80px;
+    height: 40px;
+}
+#gamesGrid>div>button:hover{
+    border: none !important;
+
+}
