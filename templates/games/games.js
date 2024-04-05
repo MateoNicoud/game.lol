@@ -1,5 +1,7 @@
 let gamesSection = document.getElementById("gamesGrid")
 let gameZone = document.getElementById("gameZone")
+let gameFrame = document.createElement('div');
+// gameFrame.style.marginTop = "100px"
 for (let i = 0; i < jsonDatas.length; i++) {
     let game = document.createElement("div");
     gamesSection.appendChild(game);
@@ -21,7 +23,16 @@ for (let i = 0; i < jsonDatas.length; i++) {
     game.appendChild(button);
     button.onclick = function (){
         gameZone.removeChild(gamesSection);
-        import("./"+name+name+".js")
+        gameZone.style.display = "flex"
+        gameZone.style.justifyContent = "center"
+
+        gameZone.style.alignItems = "center"
+        gameZone.appendChild(gameFrame);
+        gameFrame.style.border ="black 6px solid"
+        gameFrame.style.width = "1080px"
+        gameFrame.style.height = "720px"
+        gameFrame.style.marginTop = "40px"
+        import(jsonDatas[i].urlGame)
     }
 
 }
