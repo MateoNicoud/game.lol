@@ -32,6 +32,7 @@ for (let i = 0; i < jsonDatas.length; i++) {
         gameFrame.style.width = "1080px"
         gameFrame.style.height = "720px"
         gameFrame.style.marginTop = "40px"
+        gameFrame.setAttribute("id","gameFrame")
         import(jsonDatas[i].urlGame)
     }
 
