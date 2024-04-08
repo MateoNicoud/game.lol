@@ -59,60 +59,63 @@ mosaiqueButton.onclick = function () {
 
 //-------------------------------------------------------------------------
 
-let requestButton= document.getElementById("button");
-requestButton.onclick = function () {
+let form = document.getElementById("form");
+form.onsubmit = function () {
 
     let addImage = document.getElementById("addImage").value;
     let pokemon = document.createElement("div");
-    let destroyButton =document.createElement("button");
+    let destroyButton = document.createElement("button");
     imagesSection.appendChild(pokemon);
-    destroyButton.textContent="x"
+    destroyButton.textContent = "x"
     pokemon.appendChild(destroyButton)
     let showSprite = document.createElement("img");
     let sprite = addImage;
     showSprite.setAttribute('src', sprite);
-     pokemon.appendChild(showSprite);
-    destroyButton.onclick = function (){
+    pokemon.appendChild(showSprite);
+    destroyButton.onclick = function () {
         imagesSection.removeChild(destroyButton.parentNode)
     }
 
-
+    return false;
 }
 
 //--------------------------------------------------------------------
-let addInput =document.getElementById("addInput")
+let addInput = document.getElementById("addInput")
 let showButton = document.getElementById("showButton");
 let showInput = document.getElementById("showInput");
 showButton.onclick = function () {
     addInput.classList.remove("displayOff");
-    showInput.setAttribute("class","displayOff");
+    showInput.setAttribute("class", "displayOff");
 
 }
 //------------------------------------------------------------------------
 
-    let slides = document.getElementsByClassName('carrousel-item');
-    function addActive(slide){
-        slide.classList.add('active')
-    }
-    function removeActive(slide){
-        slide.classList.remove('active');
-    }
-    addActive(slides[0]);
-    setInterval(function (){
-        for (let i=0;i<slides.length;i++){
-            if (i+1 === slides.length){
+let slides = document.getElementsByClassName('carrousel-item');
+
+function addActive(slide) {
+    slide.classList.add('active')
+}
+
+function removeActive(slide) {
+    slide.classList.remove('active');
+}
+
+addActive(slides[0]);
+setInterval(function () {
+        for (let i = 0; i < slides.length; i++) {
+            if (i + 1 === slides.length) {
                 setTimeout(removeActive, 100, slides[i]);
                 addActive(slides[0]);
                 break;
             }
-            if (slides[i].classList.contains('active')){
-                setTimeout(removeActive,1000,slides[i]);
-                addActive(slides[i+1]);
+            if (slides[i].classList.contains('active')) {
+                setTimeout(removeActive, 1000, slides[i]);
+                addActive(slides[i + 1]);
                 break;
             }
         }
-        }
-   ,5000 )
+    }
+    , 5000)
 
 
 let slideImages = document.querySelectorAll('.slide-image');

@@ -130,10 +130,9 @@ object {
 #button{
     border-left: none;
     background-color: darkorange;
-}
-#button{
     height: 40px;
 }
+
 #showButton,#addInput{
     margin-bottom: 60px;
     margin-top: -50px;

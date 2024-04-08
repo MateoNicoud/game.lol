@@ -3,6 +3,8 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
+
+//----------------------------------------------------------------------
 function gameLaunch() {
 
 
@@ -94,4 +96,6 @@ function gameLaunch() {
 
 
 }
+
+//--------------------------------------------------------
 gameLaunch();
