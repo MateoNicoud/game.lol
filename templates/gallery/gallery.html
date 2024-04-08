@@ -36,10 +36,9 @@
         <button id="showButton">+</button>
     </div>
     <div class="displayOff" id="addInput">
-        <label>
-            <input type="url" placeholder="Please enter an image URL" id="addImage">
-        </label>
-        <button id="button">submit</button>
+        <form id="form">
+            <input type="url" placeholder="Please enter an image URL" id="addImage" required><input type="submit" value="submit" id="button">
+        </form>
     </div>
     <div id="displayImages" class="grid"></div>
 </main>

@@ -15,7 +15,12 @@
 <main>
     <button onclick="location.reload()">refresh</button>
     <h3>News</h3>
-    <div class="news" id="form"></div>
+    <form class="news" id="form">
+        <input type="text" id="inputName" placeholder="give a pokemon name" required>
+        <input type="url" id="inputSprite" placeholder="give a url of sprite" required>
+        <input type="submit" value="submit">
+    </form>
+    <div id="addedPokemon"></div>
     <div class="news" id="feed"></div>
 </main>
 <script src="./../../public/index.js"></script>
